@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- sldiderr -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+
+
+    <style>
+        
+    </style>
+
+    <title>Responsive Navigation Menu Bar</title>
+</head>
+
+<body style="background-color: #111111;">
+    <nav>
+        <div class="nav-bar">
+            
+            <!--
+            <span class="logo navLogo">
+                 <img src="https://demo.phlox.pro/freelancer/wp-content/uploads/sites/272/2021/02/logo-header.svg"> 
+                <svg data-v-6805eed4="" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="65%" height="50%"
+                    viewBox="0 0 340.000000 250.000000" preserveAspectRatio="xMidYMid meet"
+                    color-interpolation-filters="sRGB" style="margin: auto;">
+                    <g data-v-6805eed4="" fill="#fff" class="bordersvg b-d1"
+                        transform="translate(31.056673526763916,46.64749440492278)">
+                        <path fill-opacity="0" stroke="#fff" stroke-width="3"
+                            d="M 146.7050018310547 52.247501373291016 A 78.35250091552734 78.35250091552734 0 1 0 146.7050018310547 104.45750045776367">
+                        </path>
+                        <g transform="translate(10,52.247501373291016)">
+                            <g>
+                                <rect data-gra="graph-name-bg" stroke-width="2" class="i-icon-bg" x="0" y="0"
+                                    width="273.4100036621094" height="52.209999084472656" fill-opacity="0"></rect>
+                                 
+                            </g>
+                            <g transform="translate(10,3)">
+                                <g data-gra="path-name" fill-rule="" class="tp-name">
+                                    <g transform="scale(1)">
+                                        <g>
+                                            <path
+                                                d="M55.17 0L51.14 0 51.14-21.46 11.47-21.46 11.47 0 7.44 0 7.44-44.28 11.47-44.28 11.47-25.2 51.14-25.2 51.14-44.28 55.17-44.28 55.17 0ZM116.18 0L112.18 0 112.18-4.9Q109.86-3.64 106.91-2.58 103.96-1.51 100.69-0.74 97.42 0.03 93.97 0.45 90.53 0.87 87.21 0.87L87.21 0.87Q82.89 0.87 79.46 0.1 76.02-0.68 73.64-2.21 71.25-3.74 69.97-6.01 68.68-8.28 68.68-11.28L68.68-11.28Q68.68-14.24 70.18-16.52 71.67-18.79 74.45-20.48 77.22-22.17 81.13-23.35 85.05-24.52 89.88-25.35 94.72-26.17 100.34-26.7 105.96-27.23 112.18-27.59L112.18-27.59 112.18-30.97Q112.18-33.03 111.41-34.61 110.64-36.19 109.25-37.37 107.86-38.54 106-39.33 104.13-40.12 101.95-40.61 99.78-41.09 97.37-41.3 94.97-41.51 92.56-41.51L92.56-41.51Q89.3-41.51 86.63-41.19 83.95-40.86 81.63-40.3 79.31-39.74 77.18-38.99 75.06-38.25 72.9-37.42L72.9-37.42 72.9-42.12Q77.38-43.31 82.45-44.2 87.53-45.08 93.23-45.08L93.23-45.08Q98.07-45.08 102.26-44.26 106.45-43.44 109.54-41.64 112.63-39.83 114.41-36.98 116.18-34.13 116.18-30.04L116.18-30.04 116.18 0ZM112.18-9.12L112.18-24.01Q101.64-23.43 94.18-22.37 86.72-21.3 81.99-19.75 77.25-18.21 75.04-16.15 72.83-14.08 72.83-11.47L72.83-11.47Q72.83-9.35 73.91-7.7 74.99-6.06 77.02-4.95 79.05-3.83 81.95-3.27 84.85-2.71 88.46-2.71L88.46-2.71Q90.59-2.71 92.86-2.95 95.13-3.19 97.39-3.63 99.65-4.06 101.84-4.66 104.03-5.25 105.96-5.96 107.9-6.67 109.49-7.48 111.09-8.28 112.18-9.12L112.18-9.12ZM132.71-44.28L136.74-44.28 136.74-37.48Q138.16-38.7 139.9-40.09 141.64-41.48 143.73-42.64 145.83-43.8 148.28-44.57 150.73-45.34 153.53-45.34L153.53-45.34Q158.01-45.34 161.46-43.33 164.91-41.31 167.03-37.09L167.03-37.09Q169.1-38.99 171.29-40.52 173.48-42.06 175.78-43.12 178.09-44.18 180.54-44.76 182.99-45.34 185.6-45.34L185.6-45.34Q188.92-45.34 191.64-44.21 194.36-43.09 196.26-41.12 198.17-39.16 199.21-36.5 200.26-33.84 200.26-30.81L200.26-30.81 200.26 0 196.23 0 196.23-29.78Q196.23-32.55 195.57-34.72 194.91-36.9 193.51-38.41 192.11-39.93 189.93-40.72 187.76-41.51 184.73-41.51L184.73-41.51Q182.31-41.51 179.94-40.81 177.57-40.12 175.41-38.98 173.25-37.83 171.38-36.38 169.52-34.93 168.1-33.39L168.1-33.39Q168.26-32.48 168.27-31.84 168.29-31.2 168.29-30.29L168.29-30.29 168.29 0 164.26 0 164.26-29.78Q164.26-33.06 163.39-35.3 162.52-37.54 160.98-38.93 159.43-40.32 157.32-40.91 155.21-41.51 152.73-41.51L152.73-41.51Q150.37-41.51 148.07-40.7 145.76-39.9 143.67-38.61 141.58-37.32 139.8-35.72 138.03-34.13 136.74-32.55L136.74-32.55 136.74 0 132.71 0 132.71-44.28ZM255.79 0L236.65-20.01 217.57 0 212.48 0 234.13-22.72 213.54-44.28 218.63-44.28 236.65-25.33 254.72-44.28 259.82-44.28 239.22-22.72 260.85 0 255.79 0Z"
+                                                transform="translate(-7.440000057220459, 45.34000015258789)"></path>
+                                        </g> 
+                                    </g>
+                                </g> 
+                            </g>
+                        </g>
+                    </g>
+                    <defs v-gra="od"></defs>
+                </svg>
+            </span>-->
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#resume-section">ABOUT</a></li>
+                    <li><a href="#skills1">SKILLS</a></li>
+                    <li><a href="#project1">PROJECTS</a></li>
+                    <li><a href="#service1">SERVICES</a></li>
+                    <li><a href="#contact1">CONTACT</a></li>
+                </ul>
+            </div>
+
+            
+
+        </div>
+    </nav>
+    <!-- header start -->
+    <div class="blob"></div>
+    <div class="header-section"> 
+        
+        <div class="right-section">
+            <div class="intro animatedcard">
+                <h2 style="color: #64f4ab;"></h2>
+            </div>
+            <div class="main-text">
+                <h1>
+                    <span class="jap">Y o r o s h - k u</span><br>
+                    <span class="jap1">よ ろ し く</span><br>
+                    <span class="me">I'm Raymond</span> <br><span>&#60;/WebDeveloper&#62;</span>
+                </h1>
+            </div>
+            <div class="paragraph animatedcard">
+                <p></p>
+            </div>
+            <!--<div class="contact-button animatedcard">
+                <a href="#" style="border-radius: 1em;">
+                    <p style="padding: 9px;">My CV</p>
+                </a>
+            </div>-->
+        </div>
+        <div class="left-section">
+            <img class="mewhite" src="me/Picsart_22-08-21_19-20-40-390-removebg.png" alt="Header Image">
+        </div>
+    </div>
+     <!-- ABOUT ME -->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+        <div class="container">
+            <div class="row justify-content-center pb-0">
+                <div class="about-col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">About Me</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center ftco-animate">
+                    <span class="date">2024-2025</span>
+                    <h2>Bachelor of Science in Computer Science</h2>
+                    <span class="position">Western Mindanao State University</span>
+                    <p class="mt-4">
+                        As a resolute software artisan, I am fueled by a passion for transforming complex challenges into elegant, functional solutions. My academic journey culminated at Western Mindanao State University, where I earned my Bachelor of Science in Computer Science. This rigorous program equipped me with a profound grasp of foundational programming tenets, cutting-edge algorithms, and agile software development practices.
+                       <br><br>My commitment to excellence is underscored by a relentless pursuit of results, leveraging my comprehensive skill set to drive projects from conception to successful deployment. With a keen eye for detail and a collaborative spirit, I thrive in environments that demand both innovation and precision.     
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 text-center ftco-animate">
+                    <p>
+                        <a href="me/Untitled (1).pdf" class="btn btn-primary py-3 px-4">Download CV</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- SKILLS -->
+    <section class="skills" id="skills1">
+        
+        <div class="container">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 class="mb-4">My Skills</h2>
+            </div>
+            <div class="skills-imgs">
+                <img src="logo/1720356527167.png" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="logo/css3-removebg-preview.png" alt="HTML5" class="skills-img" loading="lazy" title="HTML5">
+                <img src="logo/javascript-removebg-preview.png" alt="CSS3" class="skills-img" loading="lazy" title="CSS3">
+                <img src="logo/sublime-text-svgrepo-com-removebg-preview.png" alt="Sublime Text" class="skills-img" loading="lazy" title="Sublime Text">
+                <img src="logo/react-1-logo-svgrepo-com-removebg-preview.png" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+                <img src="logo/php-removebg-preview.png" alt="Node.js" class="skills-img" loading="lazy" title="Node.js">
+                <img src="logo/java-removebg-preview.png" alt="C++" class="skills-img" loading="lazy" title="C++">
+                <img src="logo/1720356147583.png" alt="Java" class="skills-img" loading="lazy" title="Java">
+                <img src="logo/python-removebg-preview.png" alt="Python" class="skills-img" loading="lazy" title="Python">
+                <img src="logo/png-transparent-mysql-round-logo-tech-companies-thumbnail-removebg-preview__1_-removebg-preview.png" alt="PHP" class="skills-img" loading="lazy" title="PHP">
+                <img src="logo/1_bc9pmTiyKR0WNPka2w3e0Q.png" alt="Unity" class="skills-img" loading="lazy" title="Unity">
+                <img src="logo/visual-studio-svgrepo-com-removebg-preview.png" alt="MySQL" class="skills-img" loading="lazy" title="MySQL">
+                <img src="logo/vscode-removebg-preview.png" alt="Figma" class="skills-img" loading="lazy" title="Figma">
+                <img src="logo/figma-svgrepo-com-removebg-preview.png" alt="VSCode" class="skills-img" loading="lazy" title="VSCode">
+                <img src="logo/1720356096269.png" alt="Visual Studio" class="skills-img" loading="lazy" title="Visual Studio">
+                <img src="logo/adobe-photoshop-svgrepo-com-removebg-preview.png" alt="PHP" class="skills-img" loading="lazy" title="PHP">
+            </div>
+        </div>
+    </section>
+ <!-- PROJECTS -->
+<section class="project" id="project1">
+    
+    <div class="container skillsdelt mt-20 pt-16">
+        <div class="proj-col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4">My Projects</h2>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 anime" id="rightSection1">
+                <div class="flex justify-center items-center h-full">
+                    <div class="w-3/4 eat">
+                        <img class="rounded-lg"
+                            src="proj/proj3.jpg"
+                            alt="Image">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2" id="leftSection1">
+                <div class="flex flex-col h-full p-10 left_sec">
+                    
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-5xl text-white font-bold">Meet n Eat Food Hub <br>Kiosk System</h2>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <p class="text-white text-lg">The "Meet n Eat Food Hub Kiosk System" is a transformative software engineering project aimed at revolutionizing the dining experience at Sir Kerr's food hubs. This innovative kiosk system is designed to address the evolving needs of modern consumers, who seek convenience, speed, and personalization in their dining experiences. By leveraging advanced technology and user-centric design principles, the project aims to create a seamless and efficient ordering process that enhances customer satisfaction and operational efficiency.</p>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <h2 class="proj-text-5xl font-bold">Project 1</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container skillsdelt mx-auto pt-16">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2" id="leftSection">
+                <div class="flex flex-col h-full p-10 left_sec">
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-5xl text-white font-bold">Turbo Express Delivery Management System</h2>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <p class="text-white text-lg">
+                            The Turbo Express Delivery Management System is a transformative web development project aimed at revolutionizing the logistics and delivery services industry. This innovative web application is designed to address the evolving needs of modern businesses, who seek efficiency, speed, and real-time tracking in their delivery operations. By leveraging advanced web technologies and user-centric design principles, the project aims to create a seamless and efficient delivery management process that enhances customer satisfaction and operational efficiency. With its intuitive interfaces and robust features.</p>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <h2 class="proj-text-5xl font-bold">Project 2</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 anime" id="rightSection">
+                <div class="flex justify-center items-center h-full">
+                    <div class="w-3/4 turbo">
+                        <img class="rounded-lg" src="proj/proj2.jpg" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container skillsdelt mt-20 pt-16">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 anime" id="rightSection1">
+                <div class="flex justify-center items-center h-full">
+                    <div class="w-3/4 lto">
+                        <img class="rounded-lg"
+                            src="proj/proj1.jpg"
+                            alt="Image">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2" id="leftSection1">
+                <div class="flex flex-col h-full p-10 left_sec">
+                    
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-5xl text-white font-bold">LTO Theoretical Driving Simulation 3D Game</h2>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <p class="text-white text-lg">(IN DEVELOPMENT) Introducing the LTO Theoretical Driving Simulation 3D Game: A groundbreaking educational tool designed to enhance the learning experience for aspiring drivers. This immersive 3D game is crafted to simulate real-world driving scenarios, providing users with a safe and interactive environment to practice and master theoretical driving concepts.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="https://www.figma.com/design/dSHnhe41mX37Q0UiNJos3n/RR?node-id=0-1&t=162ijiyxr6njc7Ji-0" class="flex items-center text-white text-yellow-500">
+                            <span class="mr-2">
+                                <svg xmlns="https://www.figma.com/design/dSHnhe41mX37Q0UiNJos3n/RR?node-id=0-1&t=162ijiyxr6njc7Ji-0" width="18" height="10.998" viewBox="0 0 18 10.998">
+                                    <g id="right_arrow_-_icon" data-name="right arrow - icon" transform="translate(21 -6.501) rotate(90)">
+                                        <path id="Path_98" data-name="Path 98" d="M6.59,11.858a.714.714,0,0,0,.627.38h4.066v8.028a.717.717,0,1,0,1.434,0V12.238h4.066a.713.713,0,0,0,.627-.38.748.748,0,0,0-.02-.745l-4.783-7.77a.709.709,0,0,0-1.214,0L6.61,11.113A.754.754,0,0,0,6.59,11.858Z" fill="#fecd1a" />
+                                    </g>
+                                </svg>
+                            </span>              
+                            Know more
+                        </a>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <h2 class="proj-text-5xl font-bold">Project 3</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- SERVICES -->
+
+ <section class="ftco-section" id="service1">
+    <div class="container">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="service-mb-4">Services</h2>
+            </div>
+        <div class="row">
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <div class="services-1">
+                    <span class="icon">
+                        <img src="me/css-svgrepo-com-modified-removebg-preview.png" alt="Web Design" width="80" height="80">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Web Development / Design</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <div class="services-1">
+                    <span class="icon">
+                        <img src="me/graphic-design-allocation-svgrepo-com-modified-removebg-preview.png" alt="Web Developer" width="80" height="80">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Freelancing / Graphic Design</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <div class="services-1">
+                    <span class="icon">
+                        <img src="me/network-settings-svgrepo-com-modified-removebg-preview.png" alt="Software Developing" width="80" height="80">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Comprehensive IT Specialist</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-wrap" id="contact1">
+    <a href="index.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+    <div class="proj-col-md-8 text-center heading-section ftco-animate">
+        <h2 class="mb-4">My Contacts</h2>
+    </div>
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d588.7422301894111!2d122.0890444060942!3d6.941899763156237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1720386092433!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container">
+        
+        <div class="row contact-cards">
+            <div class="col-md-4">
+                <div class="contact-card">
+                    <i class="fa fa-map-marker"></i>
+                    <h2>Address</h2>
+                    <p>Putik-Tumaga Road, Uro Compound, Zamboanga City</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h2>Socials</h2>
+                    <p>instagram:reighmond<br>Facebook: Raymond Gonzales</p>
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card">
+                    <i class="fa fa-paper-plane"></i>
+                    <h2>Email</h2>
+                    <p><a href="mailto:info@themewagon.com">classicterm15@gmail.com</a><br>+63 992 5735 337</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- footer section  -->
+
+<footer class="footer1">
+    <div class="footer-content">
+        <div class="logo-section">
+            <span class="logo navLogo"></span>
+        </div>
+        <div class="info-section">
+            <p>Web Developer - Crafted with passion and creativity by <a href="https://github.com/RayTzie" class="hover-color">Monzky2024</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script>
+
+
+
+        const intersectionCallback = (entries) => {
+            for (const entry of entries) { // Loop over all elements that either enter or exit the view.
+                if (entry.isIntersecting) { // This is true when the element is in view.
+                    entry.target.classList.add('animatedcard'); // Add a class.
+                }
+            }
+        }
+
+        /**
+         * Create a observer and use the instersectionCallback as 
+         * the instructions for what to do when an element enters
+         * or leaves the view
+         */
+        const observer = new IntersectionObserver(intersectionCallback);
+
+        /**
+         * Get all .item elements and loop over them.
+         * Observe each individual item.
+         */
+        const items = document.querySelectorAll('.anime');
+        for (const item of items) {
+            observer.observe(item);
+            console.log("observ");
+        }
+
+    </script>
+
+    <script>
+        $(window).on('scroll', function () {
+            var st = $(this).scrollTop(),
+                vh = $(this).height(),
+                $counter = $('.wrapperx'),
+                ct = $counter.offset().top;
+            if ((st + vh) > ct) {
+                // #counter is in the viewport
+
+                let valueDisplays = document.querySelectorAll(".num");
+                let interval = 100;
+
+                valueDisplays.forEach((valueDisplay) => {
+                    let startValue = 0;
+                    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+                    let duration = Math.floor(interval / endValue);
+                    let counter = setInterval(function () {
+                        startValue += 1;
+                        valueDisplay.textContent = startValue;
+                        if (startValue == endValue) {
+                            clearInterval(counter);
+                        }
+                    }, duration);
+                });
+            }
+        })</script>
+
+</body>
+</body>
+
+</html>

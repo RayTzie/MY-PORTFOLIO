@@ -1,0 +1,1384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* transition: all 0.4s ease; */
+   
+   
+}
+
+.animated-img {
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 4s linear forwards;
+}
+
+.animated-skills {
+    position: relative;
+    opacity: 0;
+    animation: moveleft 4s linear forwards;
+}
+
+.animatedcard {
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s linear forwards;
+}
+
+@keyframes moveleft {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    25% {
+        opacity: 0.5;
+        transform: translateX(50pxpx);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(75px);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(150px);
+    }
+
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+:root {
+    --h1: 3.5rem;
+    --h2: 3rem;
+    --h3: 2.145rem;
+    --h4: 1.5rem;
+    --text-large: 1.6rem;
+    --text-medium: 1.275rem;
+    --text-small: 1.125rem;
+  
+    --gradient-brand: radial-gradient(
+        at 60% 31%,
+        rgb(255, 131, 139) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 48% 98%, rgba(0, 255, 166, 0.707) 0px, transparent 50%),
+      radial-gradient(at 84% 67%, rgb(255, 129, 125) 0px, transparent 50%),
+      radial-gradient(at 16% 47%, rgb(255, 90, 112) 0px, transparent 50%),
+      radial-gradient(at 73% 11%, rgb(115, 255, 225) 0px, transparent 50%),
+      radial-gradient(at 49% 37%, rgba(255, 249, 89, 0.695) 0px, transparent 50%),
+      radial-gradient(at 70% 21%, rgba(58, 255, 186, 0.715) 0px, transparent 50%);
+    --easing: cubic-bezier(0.86, 0, 0.07, 1);
+  
+    --site-max-width: 1280px;
+    --gutter-nano: 0.5rem;
+    --gutter-micro: 1rem;
+    --gutter-x-small: 1.5rem;
+    --gutter-small: 2rem;
+    --gutter-medium: 2.5rem;
+    --gutter-large: 3rem;
+    --gutter-x-large: 6rem;
+    --gutter-huge: 12rem;
+  
+    --scroll-padding: 4.375rem;
+    --radius: 85px;
+}
+
+:root {
+    --body-color: #000000;
+    --nav-color: #2d2e32;
+    --side-nav: #e2e3e6;
+    --text-color: #FFF;
+    --search-text: #010718;
+    
+}
+
+body {
+    height: 100vh;
+    background-color: #000000;
+}
+
+body.dark {
+    --body-color: #000000;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    padding: 14px; /* Adjusted padding to ensure it sticks correctly */
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 9999;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-bottom: 100px;
+}
+
+body.dark nav {
+    border: 1px solid #393838;
+    background-color: rgba(0, 0, 0, 0.1); /* Dark mode transparent background */
+}
+
+nav .nav-bar {
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    background-color: transparent; /* Ensure inner container is transparent */
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+}
+
+nav .nav-bar .sidebarOpen {
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle {
+    display: none;
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+}
+
+.nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+    opacity: 1;
+}
+
+#conbtn {
+    font-size: 18px;
+    font-weight: 500;
+    color: #25262a;
+    font-family: "Montserrat", Sans-serif;
+    background-color: #ffaf29;
+    /* background-image: (91deg,var(#ffaf29) 0%,var(#fecd1a) 100%); */
+    color: #25262a;
+    border-radius: 1em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    /* transition: all 0.3s ease-in-out; */
+    /* border: 1px solid black; */
+    box-shadow: 0 0 0 0 black;
+    text-decoration: none;
+
+}
+
+
+
+#conbtn:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+;
+
+@media (max-width: 990px) {
+    .contact-us-btn {
+        display: none;
+    }
+
+    .sidebarOpen {
+        display: block;
+    }
+}
+
+
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen {
+        display: block;
+        color: #e2e3e6;
+    }
+
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    #conbtn {
+        display: none;
+    }
+
+    nav.active .menu {
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a {
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle {
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose {
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+/* header-section */
+
+/* Your existing CSS code for the navbar goes here */
+
+@keyframes breath {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.blob {
+    position: absolute;
+    right: 0; /* Ensure it starts from the right edge of the viewport */
+    top: 0;
+    background-color: #18f98f;
+    width: 60%; /* Adjusted to 60% of the viewport width */
+    height: 100vh;
+    border-radius: 50%;
+    filter: blur(300px);
+    opacity: .3;
+    animation: breath 2s ease-in-out infinite alternate;
+    z-index: -1; /* Ensure it stays behind other content */
+    max-width: 600px; /* Added to limit the maximum width */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.blog-content {
+    position: absolute;
+    right: 0; /* Position the blog content on the right side */
+    top: 0;
+    width: 40%; /* Adjusted to 40% of the viewport width */
+    height: 100vh;
+    z-index: 1; /* Ensure it stays above the blob */
+    overflow-y: hidden; /* Ensure no vertical scroll */
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Ensure no horizontal scroll on the entire page */
+}
+
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.left-section {
+    width: 60%;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.left-section img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 30px;
+    
+}
+
+.right-section {
+    width: 90%;
+    padding-left: 50px;
+}
+
+.intro h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.main-text h1 {
+    font-size: 86px;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.main-text .me {
+    font-size: 80px;
+    
+}
+
+.main-text .jap {
+    font-size: 70px;
+    font-family: monospace;
+    font-weight: 
+}
+
+.main-text .jap {
+    display: inline-block; /* Change to inline-block or block */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    letter-spacing: .15em; /* Adjust as needed */
+    white-space: nowrap; /* Keeps the content on a single line */
+    overflow: hidden; /* Ensures the content is not visible outside the element */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    width: fit-content; /* Ensure the element has a defined width */
+    max-width: 100%; /* Adjust as needed */
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.main-text .jap1 {
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: 
+}
+
+.main-text h1 span {
+    font-size: 40px;
+    color: #fff;
+    
+}
+
+.paragraph p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contact-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #FFFDEF;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .right-section {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+
+/* General Section Styles */
+.ftco-section {
+    padding: 80px 0;
+    background-color:transparent;
+    color: #f4f4f4; /* Light text color */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* Heading Section Styles */
+.heading-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff; /* White color for headings */
+    margin-top: 100px;
+}
+
+.service-mb-4 {
+    padding-bottom: 50px;
+}
+
+.heading-section p {
+    font-size: 18px;
+    color: #cccccc; /* Light grey for paragraph text */
+}
+
+/* Text Centering */
+.text-center {
+    text-align: center;
+}
+
+/* Date and Position Styles */
+.date, .position {
+    color: #ffcc00; /* Highlight color for dates and positions */
+}
+
+/* Heading Styles */
+h2 {
+    color: #ffffff; /* White color for headings */
+}
+
+/* Paragraph Styles */
+p {
+    color: #cccccc; /* Light grey for paragraph text */
+    font-size: 20px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #ffcc00; /* Highlight color for buttons */
+    border: none;
+    color: #1a1a1a; /* Dark text color for contrast */
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #ff9900; /* Slightly darker on hover */
+}
+
+
+
+.row.justify-content-center.mt-5 .col-md-8.text-center.ftco-animate p a.btn.btn-primary.py-3.px-4 {
+    background-color: #ff9900; /* Example background color */
+    color: #ffffff; /* Example text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    font-size: 16px; /* Example font size */
+    text-decoration: none; /* Remove underline */
+}
+
+.row.justify-content-center.mt-5 .col-md-8.text-center.ftco-animate p a.btn.btn-primary.py-3.px-4:hover {
+    background-color: #ffab2d;
+}
+/* skills */
+.heading-section {
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center the div horizontally within its container */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+}
+.skills-imgs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: var(--gutter-x-large);
+    padding-block-start: var(--gutter-x-large);
+    margin-bottom: 100px;
+  }
+  
+  .skills-img {
+    block-size: 135px;
+    inline-size: 135px;
+  }
+
+ 
+  
+  @media (max-width: 1100px) {
+    .skills-img {
+      block-size: 100px;
+      inline-size: 100px;
+    }
+  }
+  
+  @media (max-width: 810px) {
+    .skills-img {
+      block-size: 85px;
+      inline-size: 85px;
+    }
+  }
+  
+  @media (max-width: 675px) {
+    .skills-imgs {
+      gap: var(--gutter-large);
+    }
+    .skills-img {
+      block-size: 70px;
+      inline-size: 70px;
+    }
+  }
+  
+  @media (max-width: 340px) {
+    .skills-img {
+      block-size: 55px;
+      inline-size: 55px;
+    }
+  }
+
+/* Your existing CSS code goes here */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+} */
+
+/* .navbar {
+    background-color: #2d2e32;
+    color: #fff;
+    padding: 10px;
+} */
+/* 
+.header-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-section1 {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.left-section1 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-section1 h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.left-section1 p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cv-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #ffaf29;
+    color: #25262a;
+    border-radius: 5px;
+}
+
+.right-section1 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+*/
+.container {
+    overflow: hidden; /* Prevents margin collapsing */
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.w-full {
+    margin: 0; /* Ensure no margin is applied */
+}
+
+.skillsdelt {
+    padding-top: 16px; /* Adjust padding to avoid unwanted gaps */
+}
+
+.left_sec {
+    padding: 10px; /* Adjust padding to avoid unwanted gaps */
+}
+
+.proj-col-md-8.text-center.heading-section.ftco-animate {
+    margin-bottom: 70px;
+    margin-top: -70px;
+}
+
+.about-col-md-8.text-center.heading-section.ftco-animate {
+
+    margin-top: -50px;
+}
+
+
+.container.skillsdelt.mx-auto.pt-16 {
+    padding-bottom: 50px;
+    margin-top: 100px;
+    background-color:transparent;
+}
+.container.skillsdelt {
+    background-color:transparent !important; /* Light blue color */
+  
+}
+
+.proj-text-5xl.font-bold {
+   font-size: 30px;
+   font-style: monospace;
+   color: #18f98f;
+}
+
+.flex .lto img {
+    padding-bottom: 80px;
+}
+
+.flex .eat img {
+    padding-bottom: 80px;
+}
+
+.card {
+    width: 45%;
+    padding: 0px;
+    background-color: rgb(45, 46, 50);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-section {
+    flex: 1 1 50%;
+}
+
+.cards-section {
+    flex: 1 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 45%;
+    /* Card styling */
+    display: flex;
+    height: 300px;
+}
+
+.card1 {
+    align-self: flex-end;
+    padding-top: 0px;
+}
+
+.card2 {
+    padding-bottom: 29px;
+    padding-top: 0px;
+    align-self: flex-end;
+    height: 329px;
+}
+
+.card3 {
+    padding-top: 34px;
+    height: 334px;
+}
+
+.card4 {
+    padding-top: 0px;
+}
+
+.content-section {
+    color: #ffffff;
+}
+
+.cv-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #ffaf29;
+    color: #25262a;
+    border-radius: 5px;
+}
+
+/* Media Query for smaller screen sizes */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content-section,
+    .cards-section {
+        flex: 1 1 100%;
+    }
+}
+
+/* skills deatila  section*/
+
+.arrow-icon {
+    color: yellow;
+    transform: rotate(-45deg);
+}
+
+.skillsdelt {
+    background-color: var(--body-color);
+}
+
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+/* button in next to skills details  */
+button {
+    height: 61px;
+    width: 141px;
+    position: relative;
+    padding: 12px 35px;
+    background: #FEC195;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid #ffaf29;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all .3s ease-in-out;
+}
+
+.star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all .8s ease;
+}
+
+button:hover {
+    background: transparent;
+    color: #FEC195;
+    box-shadow: 0 0 25px #fec1958c;
+    color: black;
+}
+
+button:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #FFFDEF
+}
+
+.ftco-section {
+    text-align: center;
+    margin: 90px;
+}
+
+.ftco-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.ftco-section .row {
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.ftco-section .col-md-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ftco-section .btn {
+    margin: 0 auto;
+}
+.services-1 {
+    margin-bottom: 40px;
+    padding: 2em;
+    background: #28a745;
+    width: 100%;
+    -webkit-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+    font-family: monospace !important;
+}
+
+.services-1 .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+
+.services-1 .icon img {
+    width: 80px;
+    height: 80px;
+}
+
+
+
+.services-1 .desc h3 {
+    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    color: #fff;
+    padding-top: 20px;
+    font-family: monospace !important;
+}
+
+
+
+.services-1 .desc h3 a {
+    color: #fff;
+    font-family: monospace !important;
+}
+
+.services-1 .desc h4 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 18px;
+    font-family: monospace !important;
+}
+
+.services-1 .desc h3 a {
+    color: #fff;
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+.services-1:hover .desc h3 a {
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.services-1:hover {
+    transform: scale(0.95); /* Zoom out effect */
+     /* Keep the background color change if needed */
+}
+
+.services-1:hover .icon i {
+    color: #fff;
+}
+
+.services-1:hover h3 {
+    color:#ffffff;
+}
+
+
+/* counter of rewards bla bla dashbord */
+.wrapperx {
+    /* position:relative;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+    top: 15%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 4px; */
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+.containerx {
+    width: 41vmin;
+    height: 43vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    /* border-radius: 0.5em; */
+    background-color: #21242b;
+
+}
+.num1{
+     border-radius: 40px 0 0 40px;
+}
+.num2{
+    border-radius: 0 40px 40px 0;
+}
+
+i {
+    color: #18f98f;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+span.num {
+    color: #64f4ab;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 87px;
+}
+
+span.text {
+    color: #e0e0e0;
+    font-size: 24px;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    /* .wrapperx {
+        width: 85vw;
+    } */
+
+    .containerx {
+        /* height: 26vmin;
+        width: 26vmin; */
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapperx {
+        /* width: 90vw; */
+        /* flex-wrap: wrap; */
+        /* gap: 30px; */
+    }
+
+    .containerx {
+        /* width: calc(50% - 40px);
+        height: 30vmin; */
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapperx {
+        /* gap: 15px; */
+    }
+
+    .containerx {
+        /* width: 100%;
+        height: 25vmin; */
+        font-size: 8px;
+    }
+}
+
+/* General Section Styling */
+.contact-wrap {
+    background:transparent;
+    padding: 60px 0;
+    
+}
+
+.contact-wrap .container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-left: 20px;
+}
+
+/* Up Button Styling */
+.up-btn {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.up-btn:hover {
+    background: #555;
+}
+
+/* Heading Styling */
+.arrow {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.arrow span {
+    color: #007bff;
+}
+
+/* Contact List Styling */
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+   
+}
+.map-container iframe {
+    border-radius: 20px;
+}
+
+.fa-map-marker {
+    color: #ffab2d !important;;/* Change this to your desired color */
+}
+.fa-mobile-alt {
+    color: #ffab2d !important;;/* Change this to your desired color */
+}
+.fa-paper-plane {
+    color: #ffab2d !important;;/* Change this to your desired color */
+}
+.contact-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.contact-card:hover {
+    background:rgba(40, 167, 69, 0.7);
+}
+
+.contact-card i {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.contact-card h2 {
+    font-size: 24px;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.contact-card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.contact-card a:hover {
+    color:#ffab2d;
+}
+.contact-card a:hover {
+    text-decoration: underline;
+}
+.fa-mobile {
+    font-size: 24px; /* Adjust the size as needed */
+    color: blue; /* Adjust the color as needed */
+}
+
+/* Map Styling */
+#googlemaps {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* footer  */
+.footer1 {
+    background-color: #232323;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    height: 80px;
+    padding-top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+.hover-color {
+    color: rgb(255, 255, 255); /* Initial color */
+    text-decoration: none; /* Optional: to remove underline */
+}
+
+.hover-color:hover {
+    color:#ffab2d; /* Color when hovered */
+}
+
+.info-section p {
+    margin: 0;
+    font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+    .otheracc{
+        width: 24%;
+    }
+}
