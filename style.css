@@ -5,8 +5,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     /* transition: all 0.4s ease; */
-   
-   
 }
 
 .animated-img {
@@ -239,8 +237,6 @@ nav .nav-bar .logo a {
 
 }
 
-
-
 #conbtn:active {
     transform: translateY(2px) translateX(1px);
     box-shadow: 0 0 0 0 black;
@@ -257,7 +253,6 @@ nav .nav-bar .logo a {
         display: block;
     }
 }
-
 
 @media (max-width: 790px) {
     nav .nav-bar .sidebarOpen {
@@ -314,10 +309,6 @@ nav .nav-bar .logo a {
         margin-top: 20px;
     }
 }
-
-/* header-section */
-
-/* Your existing CSS code for the navbar goes here */
 
 @keyframes breath {
     0% {
@@ -489,7 +480,6 @@ html {
     }
 }
 
-
 /* General Section Styles */
 .ftco-section {
     padding: 80px 0;
@@ -596,8 +586,6 @@ p {
     inline-size: 135px;
   }
 
- 
-  
   @media (max-width: 1100px) {
     .skills-img {
       block-size: 100px;
@@ -629,7 +617,7 @@ p {
     }
   }
 
-/* Your existing CSS code goes here */
+
 
 /* body {
     margin: 0;
@@ -762,8 +750,6 @@ p {
     font-size: 14px;
     line-height: 1.5;
 }
-
-
 
 .container {
     display: flex;
@@ -1058,8 +1044,6 @@ button:hover .star-6 {
     height: 80px;
 }
 
-
-
 .services-1 .desc h3 {
     line-height: 1.3;
     font-size: 20px;
@@ -1071,8 +1055,6 @@ button:hover .star-6 {
     padding-top: 20px;
     font-family: monospace !important;
 }
-
-
 
 .services-1 .desc h3 a {
     color: #fff;
@@ -1107,7 +1089,6 @@ button:hover .star-6 {
 .services-1:hover h3 {
     color:#ffffff;
 }
-
 
 /* counter of rewards bla bla dashbord */
 .wrapperx {
