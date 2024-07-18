@@ -1,6 +1,6 @@
 ## MY PORTFOLIO :open_file_folder:
 
-My Personal Job Ready Portfolio [LIVE RAW LINK](https://raytzie.github.io/MY-PORTFOLIO/)
+My Personal Job Ready Portfolio [LIVE LINK](https://raytzie.github.io/MY-PORTFOLIO/)
 
 <div style="display: inline_block"><br>
 
